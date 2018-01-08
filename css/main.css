@@ -19,25 +19,50 @@
 
 }
 /* Estilos Generales*/
-
-/* Vista index*/
-
+.fa {
+  font-size: 1.5em;
+}
 .container-flex-column {
   display: flex;
 	flex-direction:column;
-	padding: 2em;
+	padding: 1em;
   align-items: center;
   justify-content: center;
 }
-
+.container-flex-row {
+  display: flex;
+	justify-content:space-between;
+  align-items: center;
+}
 .vh100 {
 	height: 100vh;
 }
+.vh75{
+  height: 75vh;
+}
 
-.background{
+/* Vista index*/
+
+.background_gif{
   background-image:url(../assets/images/gif_fondo.gif);
   background-position:center;
   background-size:cover;
+}
+.get_connect_btn{
+  background: none;
+  color: white;
+  border:2px solid white;
+}
+.position_bottom_rigth{
+  display: flex;
+  justify-content:flex-end;
+}
+.next_icon{
+  color: #fff;
+}
+.logo{
+  margin-top: 70%;
+margin-bottom: 16em;
 }
 /* Vista welcome */
 
@@ -47,10 +72,7 @@
   background-size: cover;
   background-blend-mode: soft-light;
 }
-.container-flex-row {
-	justify-content:space-between;
-  align-items: center;
-}
+
 .container-btns {
   margin-top: 3em;
   padding: 0 3em;
@@ -69,6 +91,9 @@
   padding: 0 0.2em;
   font-size: 2em;
   color:#dd0909;
+}
+.google_icon{
+  color:red;
 }
 .btn-outline:hover {
   background-color: rgb(255, 255, 255);
@@ -94,4 +119,59 @@
 }
 .user-photo {
   float: right;
+}
+
+/* Vista interests*/
+
+.btn_before{
+  margin-left: 0.3em;
+}
+.position_top_left{
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1em;
+}
+.btn_interests_next{
+  background-color: #25EA91 ;
+  border: none;
+  margin-top: 1em;
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 1.3em;
+  color: white;
+}
+.option_interests{
+  border:none;
+  border-radius: 15px;
+  padding: 0.5em;
+  width: 15em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family:sans-serif;
+  font-weight:bolder;
+}
+.fondo_plomo{
+  background-color: #EBEDEF;
+}
+
+/* fondos para cada interes a escger por el usuario*/
+.fondo_front{
+  background-image: url(../assets/images/fondo_fronted.jpg);
+}
+.fondo_ux{
+  background-image: url(../assets/images/ux_ui.jpg);
+}
+.fondo_back{
+  background-image: url(../assets/images/backend_fondo.png);
+}
+.fondo_data{
+  background-image: url(../assets/images/data_science_fondo.jpg);
+}
+.fondo_ia{
+  background-image: url(../assets/images/ia_fondo.jpg);
+}
+.fondo_electronica{
+  background-image: url(../assets/images/electronica_fondo.jpg);
 }
