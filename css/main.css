@@ -112,11 +112,12 @@ margin-bottom: 16em;
   margin-top: 1em;
 }
 .btn_interests_next{
-  background-color: #82E0AA ;
+  background-color: #25EA91 ;
   border: none;
   margin-top: 1em;
   padding: 0.5em 1em 0.5em 1em;
   font-size: 1.3em;
+  color: white;
 }
 .option_interests{
   border:none;
@@ -132,7 +133,7 @@ margin-bottom: 16em;
   font-weight:bolder;
 }
 .fondo_plomo{
-  background-color: #ECF0F1;
+  background-color: #EBEDEF;
 }
 
 /* fondos para cada interes a escger por el usuario*/
