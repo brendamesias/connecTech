@@ -3,3 +3,26 @@
   margin: 0;
   padding: 0;
 }
+.container-flex-row {
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+}
+
+.container-flex-column {
+  display: flex;
+	flex-direction:column;
+  justify-content: center;
+	padding: 2em;
+  align-items: center;
+}
+
+.vh100 {
+	height: 100vh;
+}
+
+.background{
+  background-image:url(../assets/images/fondo.jpg);
+  background-position:center;
+  background-size:cover;
+}
