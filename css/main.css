@@ -1,20 +1,30 @@
+/* Seteo de archivos */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.container-flex-row {
-	display: flex;
-	justify-content: space-between;
-  align-items: center;
+/* Clases Reutilizables*/
+.spacing {
+
 }
+.outline {
+
+}
+.text {
+
+}
+/* Estilos Generales*/
+
+/* Vista index*/
 
 .container-flex-column {
   display: flex;
 	flex-direction:column;
-  justify-content: center;
 	padding: 2em;
   align-items: center;
+  justify-content: center;
 }
 
 .vh100 {
@@ -25,4 +35,47 @@
   background-image:url(../assets/images/gif_fondo.gif);
   background-position:center;
   background-size:cover;
+}
+/* Vista welcome */
+
+.bckg {
+  background-color: rgba(73, 54, 18, 0.959);
+  background-image: url(../assets/images/fondo.jpg);
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+.container-flex-row {
+	justify-content:space-between;
+  align-items: center;
+}
+.container-btns {
+  margin-top: 3em;
+  padding: 0 3em;
+  justify-content: space-between;
+  bottom: 0;
+}
+.btn-outline {
+  border:2px solid rgb(255, 255, 255);
+  color:white;
+  padding:0.5em 0.8em;
+  font-size:1.5em;
+  font-weight: bolder;
+  background: none;
+  margin-bottom: 1em;
+}
+.fa {
+  padding: 0 0.5em;
+  font-size: 2em;
+  color:#921515;
+}
+.btn-outline:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(243, 160, 6);
+}
+.description {
+  margin: 5em 1em 0 1em;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size:2.3em;
+  color:rgb(255, 255, 255)
 }
