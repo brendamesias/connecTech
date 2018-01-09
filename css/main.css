@@ -108,19 +108,58 @@ margin-bottom: 16em;
 }
 /* Vista User */ 
 
+main {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
 .header {
+  padding:0.5em 1em;
   width: 100%;
   background-color: rgb(0, 0, 0);
-  height:50px;
+  height:60px;
+}
+.logo-header {
+  color:#fff;
+  font-weight: bolder;
+  font-size: 1.5em;
+  vertical-align: bottom;
 }
 .header-img {
   max-height: auto;
   max-width: 50px;
 }
-.user-photo {
+.user-photo-min {
+  max-width: 30px;
   float: right;
 }
-
+body > header > div > div > nav > ul:nth-child(1) > i {
+  color:rgb(194, 194, 194);
+  position: absolute;
+  left: 0;
+}
+.user-photo{
+  max-width: 10em;
+  height: auto;
+  margin: auto;
+}
+.btn-follow {
+  display: block;
+  background-color: rgba(35, 165, 94, 0.562);
+  border:none;
+}
+.about {
+  background-color: rgb(200, 209, 235);
+  border-radius: 3em;
+  padding:1em;
+}
+.btn-tags {
+  font-size: 0.9em;
+  font-weight: bold;
+  background: rgba(215, 213, 235, 0.959);
+  border-radius: 10px;
+  padding:0.4em;
+}
 /* Vista interests*/
 
 .btn_before{
