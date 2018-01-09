@@ -30,6 +30,7 @@ $(document).ready(function() {
   			var credential = error.credential;
   			// ...
 			});
+			return false 
 		})
 	// DATA REAL TIME FIREBASE EXAMPLE
 	// var trying =  $('#trying');
