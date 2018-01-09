@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 /* Clases Reutilizables*/
 .inline {
@@ -82,7 +83,9 @@
   color:rgb(255, 255, 255)
 }
 /* Vista User */ 
+
 main {
+  font-family: 'Lato', sans-serif;
   text-align: center;
 }
 
@@ -92,6 +95,12 @@ main {
   background-color: rgb(0, 0, 0);
   height:60px;
 }
+.logo-header {
+  color:#fff;
+  font-weight: bolder;
+  font-size: 1.5em;
+  vertical-align: bottom;
+}
 .header-img {
   max-height: auto;
   max-width: 50px;
@@ -100,8 +109,10 @@ main {
   max-width: 30px;
   float: right;
 }
-nav > ul >li > .fa-chevron-left {
-  color:rgb(68, 209, 111);
+body > header > div > div > nav > ul:nth-child(1) > i {
+  color:rgb(194, 194, 194);
+  position: absolute;
+  left: 0;
 }
 .user-photo{
   max-width: 10em;
@@ -112,6 +123,11 @@ nav > ul >li > .fa-chevron-left {
   display: block;
   background-color: rgba(35, 165, 94, 0.562);
   border:none;
+}
+.about {
+  background-color: rgb(200, 209, 235);
+  border-radius: 3em;
+  padding:1em;
 }
 .btn-tags {
   font-size: 0.9em;
