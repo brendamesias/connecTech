@@ -155,3 +155,10 @@ margin-bottom: 16em;
 .fondo_electronica{
   background-image: url(../assets/images/electronica_fondo.jpg);
 }
+
+/*clase para que se oscurezca el fondo cuando se selccione una prefrencia en la vista interests*/
+
+.selected_interest{
+  background-color: black;
+  color:white;
+}
