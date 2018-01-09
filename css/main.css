@@ -37,6 +37,17 @@
 .vh75{
   height: 75vh;
 }
+.icon_top_left{
+  margin-left: 0.3em;
+  color: #cc9900 ;
+}
+.position_icon_top_left{
+  padding-left: 0;
+  margin-left: 0;
+}
+.margin_top_medioem{
+  margin-top: 0.5em;
+}
 
 /* Vista index*/
 
@@ -103,16 +114,8 @@ margin-bottom: 16em;
 
 /* Vista interests*/
 
-.btn_before{
-  margin-left: 0.3em;
-}
-.position_top_left{
-  padding-left: 0;
-  margin-left: 0;
-  margin-top: 1em;
-}
 .btn_interests_next{
-  background-color: #25EA91 ;
+  background-color: #cc9900 ;
   border: none;
   margin-top: 1em;
   padding: 0.5em 1em 0.5em 1em;
@@ -161,4 +164,68 @@ margin-bottom: 16em;
 .selected_interest{
   background-color: black;
   color:white;
+}
+/*Header*/
+.header{
+  background-color: black;
+}
+.logo_header{
+height: auto;
+width: 30%;
+}
+.photo_user_header{
+height: auto;
+width: 15%;
+}
+
+/*vista home*/
+.section_phrase{
+  text-align: center;
+  font-family:cursive;
+}
+.phrase_tech{
+  padding-top: 1em;
+}
+.elements_inline{
+  display: flex;
+  justify-content: flex-start;
+}
+.input_user_publication{
+  margin-left: 1em;
+}
+/*clases para modal de la vosta home*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.color_plomo_icon{
+  color: #818181;
 }

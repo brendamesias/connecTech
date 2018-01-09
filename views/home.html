@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="../css/main.css">
+	<title>Home</title>
+</head>
+<body class="vh100 fondo_plomo">
+
+  <header class="container-flex-column header">
+    <div class="col-xs-12 container-flex-row position_icon_top_left">
+      <span onclick="openNav()"><i class="fa fa-bars fa-2x icon_top_left color_plomo_icon" aria-hidden="true"></i></span>
+      <img class="img-responsive logo_header" src="../assets/images/logo_connectech.png" class="img-responsive logo" alt="logo">
+      <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
+    </div>
+  </header>
+
+  <section class="section_phrase vh15">
+    <div class="container phrase_tech">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="rotando" style="height:60px;margin:0px auto;"></div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <div class="section_to_post">
+    <div class="container-flex-column">
+      <div class="col-xs-12 container-flex-row elements_inline">
+        <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
+        <form class="form-inline">
+          <a data-toggle="modal" data-target="#form_post" data-whatever="@mdo"><input type="email" class="form-control input_user_publication" id="exampleInputEmail3" placeholder="Share, ask and connect"></a>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <main class="all_publications">
+  </main>
+
+  <div class="modal_menu_hamburguer">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Front-end</a>
+      <a href="#">Backend</a>
+      <a href="#">UX / UI</a>
+      <a href="#">Data science</a>
+      <a href="#">IA / Machine Learning</a>
+      <a href="#">Electronic</a>
+      <a href="#">cerrar sesion</a>
+    </div>
+  </div><!--acaba modal_menu hamburguesa-->
+
+<!--modal publication user form-->
+<div class="modal fade" id="form_post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">¿Que deseas compartir?</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+              </div>
+              <button type="submit" class="btn btn-default">Send invitation</button>
+            </form>
+
+            <div class="form-group">
+              <label for="message-text" class="control-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--script para modal menu hamburguesa-->
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+  };
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  };
+  </script>
+  <script src="https://use.fontawesome.com/21b158d175.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>
