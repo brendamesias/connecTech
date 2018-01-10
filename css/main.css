@@ -207,9 +207,18 @@ width: 10%;
 .all_publications{
   padding-bottom: 1em;
 }
+.publication{
+  padding-top: 1em;
+  text-align:justify;
+}
 .section_to_post{
-  padding-top: 4.5em;
   border-bottom: 1px dotted #818181;
+}
+.padding_cause_header{
+  padding-top: 4.5em;
+}
+#title_post{
+  font-weight: bold;
 }
 
 /*modal del boton hambuerguesa de vista home*/
@@ -252,4 +261,13 @@ width: 10%;
 .color_plomo_icon{
   color: #818181;
 }
-/*modal user form post*/
+/*estilos para filters.html*/
+.options_filters_type_post{
+  padding-bottom: 0;
+}
+.title_tag_search_post{
+  text-align: center;
+  font-weight: bolder;
+  font-family:monospace;
+  color: black;
+}
