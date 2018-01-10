@@ -15,7 +15,6 @@ $(document).ready(function () {
 
 	// Evento que por medio  de un pop-up te permite acceder con tu cuenta de  google
 	$('#btn-signup').click(
-<<<<<<< HEAD
 		function signUp(event){
 			firebase.auth().signInWithPopup(provider).then(function(result) {
  			// This gives you a Google Access Token. You can use it to access the Google API.
@@ -34,8 +33,8 @@ $(document).ready(function () {
   			// ...
 			});
 			return false 
-		})
-=======
+		});
+	
 		function signUp() {
 			firebase.auth()
 				.signInWithPopup(provider)
@@ -92,8 +91,6 @@ $(document).ready(function () {
 
 		reader.readAsDataURL(this.files[0]);
 	});
-
->>>>>>> 97c113f22f9eda45717798734aa21a70df20af30
 	// DATA REAL TIME FIREBASE EXAMPLE
 	// var trying =  $('#trying');
 	// var theRef = firebase.database().ref().child('text');
