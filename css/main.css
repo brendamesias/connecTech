@@ -176,6 +176,8 @@ margin-bottom: 16em;
 }
 .header{
   background-color: black;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .logo_header{
 height: auto;
@@ -183,7 +185,7 @@ width: 30%;
 }
 .photo_user_header{
 height: auto;
-width: 15%;
+width: 10%;
 }
 
 /*vista home*/
@@ -193,6 +195,7 @@ width: 15%;
 }
 .phrase_tech{
   padding-top: 1em;
+  border: none;
 }
 .elements_inline{
   display: flex;
@@ -201,8 +204,12 @@ width: 15%;
 .input_user_publication{
   margin-left: 1em;
 }
-.section_phrase{
-padding-top: 6em;
+.all_publications{
+  padding-bottom: 1em;
+}
+.section_to_post{
+  padding-top: 4.5em;
+  border-bottom: 1px dotted #818181;
 }
 
 /*modal del boton hambuerguesa de vista home*/
