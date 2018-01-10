@@ -18,6 +18,15 @@ $(document).ready(function() {
   var optionsTypePost = $('#type_post').children();
   console.log(optionsTypePost);
 
+  var inputTitlePostVal = $('.title-post-input');
+  var descriptionPostVal = $('.description-post');
+  var titlePost = $('#title_post').text();
+  // console.log(titlePost); --> Nuevo Lenguaje de programación cuántico
+  var descriptionPost = $('#description_post').text();
+  var btnSubmitFormPost = $('#submit_form_post');
+  var containerPublications = $('.all_publications');
+  var publicationClone = $('.publication');
+
   // funciones que capturen las entradas de los inputs y formularios
 
   $(tagsForPost).click(function(event) {
@@ -30,49 +39,22 @@ $(document).ready(function() {
     console.log(valorInputTypePost);
   });
 
-
-  console.log($('#title_post').val());
-
-
-/*
-    tagsForPost.addEventListener('click', function(event){
-      for (var i = 0; i < optionsTagPost.length; i++) {
-       optionsTagPost[i].addEventListener('click', function(event) {
-          console.log(event.target);
-
-       });// función o evento general click en cualquier  sede  multiples eventos
-     };// for que recorre sedes para hacer ventos click en cualquier sede
-    })
-    */
-
-
-
-
-    /*
-    $optionInterestsForm.each(function() {
-      // console.log($(this)); --> r.fn.init [option]
-      var elementInterestForm = $(this)[0];
-      console.log(elementInterestForm);
-      var x = Object.values($(this))[0];
-      console.log(x);
-      var textInterest = $(this).val();
-      $(elementInterestForm).click(function() {
-        alert('hola mundo');
-      });
-      */
-  // });
-
-/*
-     for (let i = 0; i < tiposDeComida.length; i++) {
-       if (tiposDeComida[i].name === valorDeInput) {
-         let valor = tiposDeComida[i][valorDeInput]['platos'];
-         valor.forEach(function(elemento) {
-           let valorImg = elemento.photo;
-           $('#fotos_comidas').append(`<img src=${valorImg} />`);
-         });
-       }
-     }
-
+  inputTitlePostVal.on('input', function() {
+    inputTitlePostVal = event.target.value ;
+    // console.log(inputTitlePostVal);
   });
-  */
+
+  descriptionPostVal.on('input', function() {
+    descriptionPostVal = event.target.value ;
+    // console.log(descriptionPostVal);
+  });
+
+  btnSubmitFormPost.click(function(event) {
+    titlePost = inputTitlePostVal;
+    descriptionPost = descriptionPostVal;
+    console.log('new titlePost :' + titlePost);
+    console.log('new descriptionPost :' + descriptionPost);
+    var clonePost = publicationClone.clone();
+    containerPublications.prepend(clonePost.html());
+  });
 });
