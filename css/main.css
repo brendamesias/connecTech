@@ -48,6 +48,10 @@
 .margin_top_medioem{
   margin-top: 0.5em;
 }
+.display_inline{
+  display: inline;
+  margin: 0.5em;
+}
 
 /* Vista index*/
 
@@ -166,6 +170,10 @@ margin-bottom: 16em;
   color:white;
 }
 /*Header*/
+#header{
+  position:fixed;
+  z-index: 1000;
+}
 .header{
   background-color: black;
 }
@@ -181,7 +189,7 @@ width: 15%;
 /*vista home*/
 .section_phrase{
   text-align: center;
-  font-family:cursive;
+  font-family:sans-serif;
 }
 .phrase_tech{
   padding-top: 1em;
@@ -193,7 +201,15 @@ width: 15%;
 .input_user_publication{
   margin-left: 1em;
 }
-/*clases para modal de la vosta home*/
+.section_phrase{
+padding-top: 6em;
+}
+
+/*modal del boton hambuerguesa de vista home*/
+.modal_menu_hamburguer{
+  position: fixed;
+  z-index: 20000;
+}
 .sidenav {
     height: 100%;
     width: 0;
@@ -229,3 +245,4 @@ width: 15%;
 .color_plomo_icon{
   color: #818181;
 }
+/*modal user form post*/
