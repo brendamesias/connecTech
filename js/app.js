@@ -94,4 +94,6 @@ $(document).ready(function() {
   // var trying =  $('#trying');
   // var theRef = firebase.database().ref().child('text');
   // theRef.on('value', snap => $(trying).html(snap.val()))
+	
+  // 
 });
