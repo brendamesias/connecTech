@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // variables del dom declaradas
+  // variables del dom declaradas (modal)
   var tagsForPost = $('#tag')[0];
   console.log(tagsForPost);
 
@@ -20,12 +20,18 @@ $(document).ready(function() {
 
   var inputTitlePostVal = $('.title-post-input');
   var descriptionPostVal = $('.description-post');
+
+  // trayenpo del dom (estructura de una publicaciopn contenido)
   var titlePost = $('#title_post').text();
   // console.log(titlePost); --> Nuevo Lenguaje de programación cuántico
   var descriptionPost = $('#description_post').text();
+
   var btnSubmitFormPost = $('#submit_form_post');
-  var containerPublications = $('.all_publications');
-  var publicationClone = $('.publication');
+  var containerPublications = document.getElementById('all_publications');
+  console.log(containerPublications);
+  var structurePublication = document.getElementById('publication');
+  console.log(structurePublication);
+  // console.log(structurePublication.children());
 
   // funciones que capturen las entradas de los inputs y formularios
 
@@ -41,20 +47,26 @@ $(document).ready(function() {
 
   inputTitlePostVal.on('input', function() {
     inputTitlePostVal = event.target.value ;
-    // console.log(inputTitlePostVal);
+    // console.log('newtitle:  ' + inputTitlePostVal);
   });
 
   descriptionPostVal.on('input', function() {
-    descriptionPostVal = event.target.value ;
-    // console.log(descriptionPostVal);
+    inputDescriptionPostVal = event.target.value ;
+    // console.log('newdescription :  ' + descriptionPostVal);
   });
 
   btnSubmitFormPost.click(function(event) {
-    titlePost = inputTitlePostVal;
-    descriptionPost = descriptionPostVal;
-    console.log('new titlePost :' + titlePost);
-    console.log('new descriptionPost :' + descriptionPost);
-    var clonePost = publicationClone.clone();
-    containerPublications.prepend(clonePost.html());
+    var clonePost = structurePublication.cloneNode(true);
+    console.log(clonePost);
+    // var textTitlePostclone = clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[0].firstElementChild.textContent ;
+    clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[0].firstElementChild.textContent = inputTitlePostVal ;
+    clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[1].children[0].textContent = inputDescriptionPostVal
+    // console.log(clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[1].children[0].textContent);
+    // textTitlePostclonet --> nuevo lenguaje de programacion cuantico
+    // textTitlePostclone = inputTitlePostVal ;
+    // console.log(textTitlePostclone);
+
+    // containerPublications.prepend(clonePost);
+    containerPublications.appendChild(clonePost);
   });
 });
