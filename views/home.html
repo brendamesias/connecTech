@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="../css/main.css">
 	<title>Home</title>
 </head>
@@ -15,7 +15,7 @@
 	    <div class="col-xs-12 container-flex-row position_icon_top_left">
 	      <span onclick="openNav()"><i class="fa fa-bars fa-2x icon_top_left color_plomo_icon" aria-hidden="true"></i></span>
 	      <h2 style="color:white;">ConnecTech</h2>
-	      <span><img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt=""></span>
+	      <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
 	    </div>
 	  </header>
 	</div>
@@ -29,10 +29,10 @@
         </form>
       </div>
     </div>
-  </div>
-
-  <main class="all_publications">
-		<div class="publication">
+	</div>
+	<!-- Contenedor publicaciones-->
+  <main id="all_publications" class="all_publications">
+		<div id="publication" class="publication display_none">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
@@ -71,6 +71,7 @@
 			</div><!--container-->
 		</div><!--publication-->
   </main>
+<!--Modal menu-hamburguesa-->
   <div class="modal_menu_hamburguer">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -82,7 +83,7 @@
       <a href="#">Electronic</a>
       <a href="#">cerrar sesion</a>
     </div>
-  </div><!--acaba modal_menu hamburguesa-->
+  </div>
 
 <!--modal publication user form-->
 <div class="modal fade" id="form_post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -93,7 +94,6 @@
           <h4 class="modal-title" id="exampleModalLabel">¿Que deseas compartir?</h4>
         </div>
         <div class="modal-body">
-          <form>
             <form class="form-inline">
               <div class="form-group">
                 <label for="exampleInputEmail2">TAG:</label>
@@ -137,14 +137,16 @@
       </div>
     </div>
   </div>
-	<script>
-		function openNav() {
-			document.getElementById('mySidenav').style.width = '100%';
-		};
-		function closeNav() {
-			document.getElementById('mySidenav').style.width = '0';
-		};
-	</script>
+
+  <!--script para modal menu hamburguesa-->
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+  };
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  };
+  </script>
   <script src="https://use.fontawesome.com/21b158d175.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
