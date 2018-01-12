@@ -58,17 +58,9 @@ $(document).ready(function() {
   btnSubmitFormPost.click(function(event) {
     var clonePost = structurePublication.cloneNode(true);
     console.log(clonePost);
-    // var textTitlePostclone = clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[0].firstElementChild.textContent ;
     clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[0].firstElementChild.textContent = inputTitlePostVal ;
     clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[1].children[0].textContent = inputDescriptionPostVal ;
-    // console.log(clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[1].children[0].textContent);
-    // textTitlePostclonet --> nuevo lenguaje de programacion cuantico
-    // textTitlePostclone = inputTitlePostVal ;
-    // console.log(textTitlePostclone);
     clonePost.classList.remove('display_none');
-
-
     containerPublications.prepend(clonePost);
-    // containerPublications.appendChild(clonePost);
   });
 });
