@@ -1,3 +1,4 @@
+// Inicializando el document 
 $(document).ready(function () {
 
 	// Inicializando Firebase
@@ -33,7 +34,10 @@ $(document).ready(function () {
 					$('#your-photo').append('<img class="img-responsive" src="' + result.user.photoURL + '"/>');
 				})
 		});
-
+	// Redirigiendo a la vista home
+	$('#next-view').on('click', function(){
+		window.location.href = 'interests.html';
+	})
 	//Guardar información del usuario en  la base de datos
 	function saveUser(user) {
 		var userData = {
@@ -44,32 +48,7 @@ $(document).ready(function () {
 		}
 		firebase.database().ref('usersData').push(userData);
 	};
-	// Upload Image
-	$('#preview').hover(
-		function () {
-			$(this).find('a').fadeIn();
-		}, function () {
-			$(this).find('a').fadeOut();
-		}
-	)
-	$('#file-select').on('click', function (e) {
-		e.preventDefault();
-
-		$('#file').click();
-	})
-
-	$('input[type=file]').change(function () {
-		var file = (this.files[0].name).toString();
-		var reader = new FileReader();
-
-		$('#file-info').text('');
-		$('#file-info').text(file);
-
-		reader.onload = function (e) {
-			$('#preview img').attr('src', e.target.result);
-		}
-
-		reader.readAsDataURL(this.files[0]);
+	
 	});
 
 	// DATA REAL TIME FIREBASE EXAMPLE
