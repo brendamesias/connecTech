@@ -7,6 +7,9 @@
   padding: 0;
 }
 /* Clases Reutilizables*/
+.display_none {
+  display:none;
+}
 .inline {
   display:inline-block;
 }
