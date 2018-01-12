@@ -330,17 +330,3 @@ width: 10%;
   right: 5px;
   display: none;
 }
-#file-info {
-  text-align: center;
-  display: block;
-}
-input[type=file] {
-  position: absolute;
-visibility: hidden;
-width: 0;
-z-index: -9999;
-}
-#file-save {
-  text-align:center;
-  width: 171px;
-}
