@@ -52,6 +52,10 @@
   display: inline;
   margin: 0.5em;
 }
+.display_none{
+  display: none;
+}
+
 
 /* Vista index*/
 
