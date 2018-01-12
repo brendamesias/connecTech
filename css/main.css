@@ -344,3 +344,7 @@ z-index: -9999;
   text-align:center;
   width: 171px;
 }
+/**/
+.select {
+  opacity: .5;
+}
