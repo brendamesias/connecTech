@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="../css/main.css">
+	<title>Home</title>
+</head>
+<body class="vh100 fondo_plomo">
+	<div id="header">
+		<header class="container-flex-column header">
+	    <div class="col-xs-12 container-flex-row position_icon_top_left">
+	      <span onclick="openNav()"><i class="fa fa-bars fa-2x icon_top_left color_plomo_icon" aria-hidden="true"></i></span>
+	      <h2 style="color:white;">ConnecTech</h2>
+	      <a href="user.html"><img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt=""></a>
+	    </div>
+	  </header>
+	</div>
+
+  <div class="section_to_post padding_cause_header">
+    <div class="container-flex-column">
+      <div class="col-xs-12 container-flex-row elements_inline">
+        <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
+        <form class="form-inline style="width:100%"">
+          <a data-toggle="modal" data-target="#form_post" data-whatever="@mdo"><input type="email"  class="form-control input_user_publication" id="exampleInputEmail3" placeholder="Share, ask and connect"></a>
+        </form>
+      </div>
+    </div>
+	</div>
+	<!-- Contenedor publicaciones-->
+  <main id="all_publications" class="all_publications">
+		<div id="publication" class="publication display_none">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="col-xs-2 container-flex-column">
+							<img id="photo_user_post" style="width:100%" class="photo_user_header" src="../assets/images/user-default.png" alt="">
+							<span id="name_user_post">Brenda Mesias</span>
+							<button type="button" class="btn btn-primary btn-xs">follow</button>
+							<div class="btn-group">
+							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+								style="padding:0 0.4em 0 0.4em; background:none; margin-top:0.5em;">
+							    <i class="fa fa-bars" aria-hidden="true"></i>
+							  </button>
+							  <ul class="dropdown-menu">
+							    <li><a href="#">Share</a></li>
+							    <li><a href="#">span</a></li>
+							  </ul>
+							</div>
+						</div>
+						<div class="col-xs-10">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-12">
+										<span id="title_post">Nuevo Lenguaje de programación cuántico</span>
+									</div>
+									<div class="col-xs-12">
+										<p id="description_post">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									</div>
+									<div class="col-xs-12">
+										<img  id="img_post" style="width:100%" src="../assets/images/backend_fondo.png">
+									</div>
+								</div><!--row-->
+							</div><!--container-->
+						</div><!--col-xs-10-->
+					</div><!--col-xs-12-->
+				</div><!--row-->
+			</div><!--container-->
+		</div><!--publication-->
+  </main>
+<!--Modal menu-hamburguesa-->
+  <div class="modal_menu_hamburguer">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="filters.html">Front-end</a>
+      <a href="#">Backend</a>
+      <a href="#">UX / UI</a>
+      <a href="#">Data science</a>
+      <a href="#">IA / Machine Learning</a>
+      <a href="#">Electronic</a>
+      <a href="#">cerrar sesion</a>
+    </div>
+  </div>
+
+<!--modal publication user form-->
+<div class="modal fade" id="form_post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">¿Que deseas compartir?</h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="exampleInputEmail2">TAG:</label>
+								<select class="form-control" id="tag">
+								  <option>Front-end</option>
+								  <option>Backend</option>
+								  <option>UX - UI</option>
+								  <option>Data science</option>
+								  <option>IA - Machine Learning</option>
+									<option>Electronic</option>
+								</select>
+              </div>
+							<div class="form-group">
+								<label for="exampleInputEmail2">TYPE:</label>
+								<select class="form-control" id="type_post">
+								  <option>Events</option>
+								  <option>news</option>
+								  <option>ask and consult</option>
+								  <option>Courses</option>
+								</select>
+              </div>
+              <div class="form-group form-inline">
+                <label for="exampleInputEmail2">TITLE:</label>
+                <input type="text" class="form-control title-post-input" id="exampleInputEmail2 "  placeholder="what your publication about?">
+              </div>
+            </form>
+            <div class="form-group">
+              <label for="message-text" class="control-label">Description:</label>
+              <textarea class="form-control description-post" id="message-text"></textarea>
+            </div>
+						<div class="form-group">
+							<label for="exampleInputFile">File input</label>
+							<input type="file" id="exampleInputFile">
+						</div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit"  id="submit_form_post" class="btn btn-primary">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--script para modal menu hamburguesa-->
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+  };
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  };
+  </script>
+  <script src="https://use.fontawesome.com/21b158d175.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>

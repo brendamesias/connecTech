@@ -1,57 +1,80 @@
 /* Seteo de archivos */
 
 * {
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 /* Clases Reutilizables*/
+.display_none {
+  display:none;
+}
 .inline {
   display:inline-block;
 }
-.spacing {
-
+.icon_top_left{
+  margin-left: 0.3em;
+  color: #cc9900 ;
 }
-.outline {
-
-}
-.text {
-
+.position_icon_top_left{
+  padding-left: 0;
+  margin-left: 0;
 }
 /* Estilos Generales*/
-
-/* Vista index*/
-
+.fa {
+  font-size: 1.5em;
+}
 .container-flex-column {
   display: flex;
 	flex-direction:column;
-	padding: 2em;
+	padding: 1em;
   align-items: center;
   justify-content: center;
 }
-
+.container-flex-row {
+  display: flex;
+	justify-content:space-between;
+  align-items: center;
+}
 .vh100 {
 	height: 100vh;
 }
+.vh75{
+  height: 75vh;
+}
 
-.background{
+/* Vista index*/
+
+.background_gif{
   background-image:url(../assets/images/gif_fondo.gif);
   background-position:center;
   background-size:cover;
 }
+.get_connect_btn{
+  background: none;
+  color: white;
+  border:2px solid white;
+}
+.position_bottom_rigth{
+  display: flex;
+  justify-content:flex-end;
+}
+.next_icon{
+  color: #fff;
+}
+.logo{
+  margin-top: 70%;
+margin-bottom: 16em;
+}
 /* Vista welcome */
 
 .bckg {
-  background-color: rgba(73, 54, 18, 0.959);
   background-image: url(../assets/images/fondo.jpg);
   background-size: cover;
-  background-blend-mode: soft-light;
 }
-.container-flex-row {
-	justify-content:space-between;
-  align-items: center;
-}
+
 .container-btns {
   margin-top: 3em;
   padding: 0 3em;
@@ -65,15 +88,20 @@
   font-size:1.2em;
   background: none;
   margin-bottom: 1em;
+  
 }
 .fa-google {
   padding: 0 0.2em;
   font-size: 2em;
   color:#dd0909;
 }
+#btn-signup > i{
+  color:rgb(185, 8, 8);
+  padding:0.3em;
+}
 .btn-outline:hover {
   background-color: rgb(255, 255, 255);
-  color: rgb(243, 160, 6);
+  color: rgb(0, 0, 0);
 }
 .description {
   margin: 5em 1em 0 1em;
@@ -135,4 +163,174 @@ body > header > div > div > nav > ul:nth-child(1) > i {
   background: rgba(215, 213, 235, 0.959);
   border-radius: 10px;
   padding:0.4em;
+}
+/* Vista interests*/
+
+.btn_before{
+  margin-left: 0.3em;
+}
+.position_top_left{
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 1em;
+}
+.btn_interests_next{
+  background-color: #25EA91 ;
+  border: none;
+  margin-top: 1em;
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 1.3em;
+  color: white;
+}
+.option_interests{
+  border:none;
+  border-radius: 15px;
+  padding: 0.5em;
+  width: 15em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family:sans-serif;
+  font-weight:bolder;
+}
+.fondo_plomo{
+  background-color: #EBEDEF;
+}
+
+/* Tags segun intereses a escger por el usuario*/
+.fondo_front{
+  background-image: url(../assets/images/fondo_fronted.jpg);
+}
+.fondo_ux{
+  background-image: url(../assets/images/ux_ui.jpg);
+}
+.fondo_back{
+  background-image: url(../assets/images/backend_fondo.png);
+}
+.fondo_data{
+  background-image: url(../assets/images/data_science_fondo.jpg);
+}
+.fondo_ia{
+  background-image: url(../assets/images/ia_fondo.jpg);
+}
+.fondo_electronica{
+  background-image: url(../assets/images/electronica_fondo.jpg);
+}
+
+/* Hover vista interests*/
+
+.selected_interest{
+  background-color: black;
+  color:white;
+}
+
+/* Header */
+#header{
+  position:fixed;
+  z-index: 1000;
+}
+.header{
+  background-color: black;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.logo_header{
+height: auto;
+width: 30%;
+}
+.photo_user_header{
+height: auto;
+width: 10%;
+}
+#header > header > div > span > i {
+  color: #eec13c86;
+}
+
+/* Vista Home*/
+
+.section_phrase{
+  text-align: center;
+  font-family:sans-serif;
+}
+.phrase_tech{
+  padding-top: 1em;
+  border: none;
+}
+.elements_inline{
+  display: flex;
+  justify-content: flex-start;
+}
+.input_user_publication{
+  margin-left: 1em;
+}
+.all_publications{
+  padding-bottom: 1em;
+}
+.publication{
+  padding-top: 1em;
+  text-align:justify;
+}
+.section_to_post{
+  border-bottom: 1px dotted #818181;
+}
+.padding_cause_header{
+  padding-top: 4.5em;
+}
+#container-post {
+  padding:1em;
+  background-color: #eec13c2a;
+  height:auto;
+  border-radius: 5em;
+}
+#title_post{
+  font-weight: bold;
+}
+
+/* Modal menu hamburguesa vista home */
+
+.modal_menu_hamburguer{
+  position: fixed;
+  z-index: 20000;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Estilos modal vista home */
+#preview {
+  position: relative;
+}
+#preview a {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  display: none;
 }

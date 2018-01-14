@@ -1,5 +1,6 @@
-$(document).ready(function() {
-	// Initialize Firebase
+$(document).ready(function () {
+
+	// Inicializando Firebase
 	var config = {
 		apiKey: "AIzaSyCAqTCcsvkHHN8z3Qa85cI9Sd4CKwmjHA8",
 		authDomain: "connectech-1a62a.firebaseapp.com",
@@ -7,34 +8,73 @@ $(document).ready(function() {
 		projectId: "connectech-1a62a",
 		storageBucket: "connectech-1a62a.appspot.com",
 		messagingSenderId: "822294911375"
-	  };
+	};
 	firebase.initializeApp(config);
 
 	var provider = new firebase.auth.GoogleAuthProvider();
-	
+
+	// Evento que por medio  de un pop-up te permite acceder con tu cuenta de  google
 	$('#btn-signup').click(
-		function signUp(event){
-			firebase.auth().signInWithRedirect(provider);
-			firebase.auth().getRedirectResult().then(function(result) {
-				if (result.credential) {
-				  // This gives you a Google Access Token. You can use it to access the Google API.
-				  var token = result.credential.accessToken;
-				  // ...
-				}
-				// The signed-in user info.
-				var user = result.user;
-				console.log(user.displayName);
-			  }).catch(function(error) {
-				// Handle Errors here.
-				var errorCode = error.code;
-				var errorMessage = error.message;
-				// The email of the user's account used.
-				var email = error.email;
-				// The firebase.auth.AuthCredential type that was used.
-				var credential = error.credential;
-				// ...
-			  });
-		})
+		function signUp() {
+			firebase.auth()
+				.signInWithPopup(provider)
+				.then(function (result) {
+					// window.location.href = 'register.html';
+					console.log(result.user.displayName);
+					console.log(result.user.photoURL);
+
+					// Extraemos los datos de usuario para el modal 
+					$('#btn-modal').addClass('trying');
+					$('#btn-modal').attr('data-toggle', 'modal');
+					$('#btn-modal').attr('data-target', '#myModal');
+					$('#btn-modal').trigger('click');
+					$('#your-name').text(result.user.displayName);
+					$('#your-email').text(result.user.email);
+					$('#your-photo').append('<img class="img-responsive" src="' + result.user.photoURL + '"/>');
+				})
+		});
+	// Redirigiendo a la vista home
+	$('#next-view').on('click', function(){
+		window.location.href = 'interests.html';
+	})
+	//Guardar información del usuario en  la base de datos
+	function saveUser(user) {
+		var userData = {
+			uid: user.uid,
+			name: user.displayName,
+			email: user.email,
+			photo: user.photoURL
+		}
+		firebase.database().ref('usersData').push(userData);
+	};
+	// Upload Image
+	$('#preview').hover(
+		function () {
+			$(this).find('a').fadeIn();
+		}, function () {
+			$(this).find('a').fadeOut();
+		}
+	)
+	$('#file-select').on('click', function (e) {
+		e.preventDefault();
+
+		$('#file').click();
+	})
+
+	$('input[type=file]').change(function () {
+		var file = (this.files[0].name).toString();
+		var reader = new FileReader();
+
+		$('#file-info').text('');
+		$('#file-info').text(file);
+
+		reader.onload = function (e) {
+			$('#preview img').attr('src', e.target.result);
+		}
+
+		reader.readAsDataURL(this.files[0]);
+	});
+
 	// DATA REAL TIME FIREBASE EXAMPLE
 	// var trying =  $('#trying');
 	// var theRef = firebase.database().ref().child('text');
