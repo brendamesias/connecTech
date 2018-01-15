@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,33 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<title>Home</title>
 </head>
+
 <body class="vh100 fondo_plomo">
-	<div id="header">
-		<header class="container-flex-column header">
-	    <div class="col-xs-12 container-flex-row position_icon_top_left">
-	      <span onclick="openNav()"><i class="fa fa-bars fa-2x icon_top_left color_plomo_icon" aria-hidden="true"></i></span>
-	      <h2 style="color:white;">ConnecTech</h2>
-	      <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
-	    </div>
-	  </header>
+	<!-- Header -->
+	<div class="container-fluid">
+		<div class="row header">
+			<div class="col-xs-12">
+				<header>
+					<ul>
+						<li class="inline">
+							<span onclick="openNav()">
+								<i class="fa fa-bars fa-2x icon-menu" aria-hidden="true"></i>
+							</span>
+						</li>
+						<li class="inline">
+							<h2>ConnecTech</h2>
+						</li>
+						<li class="inline">
+							<span id="min-photo-user" data-toggle="modal" data-target="#users-profile">
+								<i class="fa fa-user fa-2x icon-menu" aria-hidden="true"></i>
+							</span>
+						</li>
+					</ul>
+				</header>
+			</div>
+		</div>
 	</div>
+<<<<<<< HEAD
 
   <div class="section_to_post padding_cause_header">
     <div class="container-flex-column">
@@ -32,10 +50,37 @@
 	</div>
 	<!-- Contenedor publicaciones-->
   <main id="all_publications" class="all_publications">
+=======
+	<!-- Contenedor nueva publicacion -->
+	<div class="main-title">
+		<h3>What's New?</h3>
+	</div>
+	<div class="section_to_post">
+		<div class="wrapper-posts">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 .col-sm-6 container-flex-row elements_inline">
+						<span>
+							<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+						</span>
+						<form class="form-inline" style="width:80%">
+							<a data-toggle="modal" data-target="#form_post" data-whatever="@mdo">
+								<input type="email" class="form-control input_user_publication" id="exampleInputEmail3" placeholder="Share, ask and connect">
+							</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Definimos una estructura base para las publicaciones -->
+	<main id="all_publications" class="all_publications">
+>>>>>>> 2480531489dc489cdf60f700e9e2158611be22e4
 		<div id="publication" class="publication display_none">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
+<<<<<<< HEAD
 						<div class="col-xs-2 container-flex-column">
 							<img id="photo_user_post" style="width:100%" class="photo_user_header" src="../assets/images/user-default.png" alt="">
 							<span id="name_user_post">Brenda Mesias</span>
@@ -154,5 +199,188 @@
     crossorigin="anonymous"></script>
   <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="../js/home.js"></script>
+=======
+						<div class="wrapper-publications">
+							<div class="col-xs-2 container-flex-column">
+								<img id="photo_user_post" style="width:100%" class="photo_user_header" src="../assets/images/user-default.png" alt="img">
+								<span id="name_user_post">Brenda Mesias</span>
+								<button type="button" class="btn btn-default btn-xs">Follow</button>
+								<div class="btn-group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+									 style="padding:0 0.4em 0 0.4em; background:none; margin-top:0.5em;">
+										<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Share</a>
+										</li>
+										<li>
+											<a href="#">Delete</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-10">
+								<div>
+									<span id="tag-of-post" class="bolder" style="color:#0B0B3B">Front-end</span>
+									<span id="type-of-post" class="bolder" style="color:#B40431">News</span>
+								</div>
+								<div class="col-xs-12">
+									<p id="description_post">Lorem ipsum dolor sit amet, consecteturadipisicing elit</p>
+								</div>
+								<div class="col-xs-12">
+									<img class="imgPost" id="img_post" style="width:100%; height:auto" ;src="../assets/images/backend_fondo.png">
+									<p id="time-of-post"></p>
+								</div>
+							</div>
+							<!--col-xs-10-->
+						</div>
+					</div>
+					<!--col-xs-12-->
+				</div>
+			</div>
+			<!--row-->
+		</div>
+		<!--container-->
+		</div>
+		<!--publication-->
+	</main>
+
+	<div class="modal_menu_hamburguer">
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#">FRONTEND</a>
+			<a href="#">BACKEND</a>
+			<a href="#">UX / UI</a>
+			<a href="#">DATA SCIENCE</a>
+			<a href="#">IA / MACHINE LEARNING</a>
+			<a href="#">ELECTRONIC</a>
+			<a href="welcome.html">Sign out
+				<i class="fa fa-sign-out" aria-hidden="true"></i>
+			</a>
+		</div>
+	</div>
+	<!--acaba modal_menu hamburguesa-->
+
+	<!-- Modal que se despliega para realizar un nuevo post -->
+	<div class="modal fade" id="form_post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content ">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="exampleModalLabel">
+						<strong>¿What do you want to share?</strong>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline">
+						<div class="form-group">
+							<label class="subtitles-modal" for="exampleInputEmail2">TAG: Choose a tag for your post.</label>
+							<select class="form-control" id="tag">
+								<option>Frontend</option>
+								<option>Backend</option>
+								<option>UX - UI</option>
+								<option>Data science</option>
+								<option>IA - Machine Learning</option>
+								<option>Electronic</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="subtitles-modal" for="exampleInputEmail2">TYPE: Choose the type for your post.</label>
+							<select class="form-control" id="type_post">
+								<option>Events</option>
+								<option>News</option>
+								<option>Ask and consult</option>
+								<option>Courses</option>
+							</select>
+						</div>
+					</form>
+					<div class="form-group">
+						<label for="message-text" class="control-label subtitles-modal">Description:</label>
+						<textarea class="form-control description-post" id="message-text" placeholder="what your publication about?"></textarea>
+					</div>
+					<div class="form-group">
+						<label class="subtitles-modal" for="exampleInputFile">File input</label>
+						<input type="file" id="input_img_post">
+					</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="submit" id="submit_form_post" class="btn btn-success">Share</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal user's profile -->
+	<div class="modal fade" id="users-profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content ">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h3 class="modal-title" id="exampleModalLabel">
+						<strong>MY ACCOUNT</strong>
+					</h3>
+				</div>
+				<div class="modal-body">
+					<picture class="col-xs-12" id="user-photo">
+					</picture>
+					<div class="info">
+						<div>
+							<h3 id="user-name">Brenda Mesias</h3>
+						</div>
+						<div>
+							<h5 id="user-email">brendamesias@gmail.com</h5>
+						</div>
+					</div>
+					<div class="wrapper-account-box">
+						<h4>I'm interesting about:</h4>
+						<i class="fa fa-tag fa-2x" aria-hidden="true"></i>
+						<div class="tags-profile">
+							<button class="btn btn-default btn-tags">#UX/UI</button>
+							<button class="btn btn-default btn-tags">#Front-End</button>
+							<button class="btn btn-default btn-tags">#Back-end</button>
+						</div>
+					</div>
+					<div class="wrapper-account-box">
+						<div class="title-friends">
+							<h4>MY Friends:</h4>
+							<i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Script para modal menu hamburguesa-->
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100%";
+			};
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+			};
+		</script>
+		<script src="https://use.fontawesome.com/21b158d175.js"></script>
+		<script src="https://momentjs.com/downloads/moment.min.js"></script>
+		<script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+		<script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+		<script src="../js/app.js"></script>
+		<script src="../js/home.js"></script>
+>>>>>>> 2480531489dc489cdf60f700e9e2158611be22e4
 </body>
+
 </html>
