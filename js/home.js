@@ -20,41 +20,22 @@ $(document).ready(function() {
   var descriptionPostVal = $('.description-post');
   // console.log(descriptionPostVal);
 
-
   // funciones que capturen las entradas de los inputs y formularios
-
   $(tagsForPost).click(function(event) {
     valorInputTag = $(this).val();
-    // console.log(valorInputTag);
   });
 
   $(typePost).click(function(event) {
     valorInputTypePost = $(this).val();
-    // console.log(valorInputTypePost);
   });
 
   descriptionPostVal.on('input', function() {
     inputDescriptionPostVal = event.target.value ;
-    // console.log('newdescription :  ' + descriptionPostVal);
   });
 
-
   btnSubmitFormPost.click(function(event) {
-    /*
-    var file = inputImgPost.val();
-    // console.log(file);
-    var oli = imgPost.attr('scr', 'file');
-    // console.log(oli);
-    imgPost.src = inputImgPost.val();
-    */
-    // clonando estructura de una publicacion
     var clonePost = structurePublication.cloneNode(true);
     var inputImgmodal = document.querySelector('#input_img_post');
-
-    // clonePost.querySelector('#img_post');
-    // console.log(clonePost.querySelector('#img_post'));
-    // reemplazando
-    // clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[1].children[0].textContent = inputDescriptionPostVal ;
     clonePost.querySelector('#tag_of_post').textContent = valorInputTag ;
     clonePost.querySelector('#TypeOfpost').textContent = valorInputTypePost ;
     clonePost.querySelector('#description_post').textContent = inputDescriptionPostVal ;
@@ -73,13 +54,6 @@ $(document).ready(function() {
     };
     reader.readAsDataURL(inputImgmodal.files[0]);
 
-
-    // var imgPostClone = clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[2].children[0] ;
-    // var rutaImgPostClone = inputImgPost.src;
-    // console.log(imgPostClone);
-    // console.log(rutaImgPostClone);
-    // imgPostClone.src = inputImgPost.val();
-    // console.log(rutaImgPostClone);
     clonePost.classList.remove('display_none');
     containerPublications.prepend(clonePost);
   });// termina el evento de clik en boton submit
