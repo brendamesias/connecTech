@@ -1,73 +1,5 @@
-<<<<<<< HEAD
-$(document).ready(function() {
-    // variables del dom declaradas (modal)
-    var tagsForPost = $('#tag')[0];
-    console.log(tagsForPost);
-  
-    var valorInputTag = $('#tag').val();
-    console.log(valorInputTag);
-  
-    var optionsTagPost = $('#tag').children();
-    console.log(optionsTagPost);
-  
-    var typePost = $('#type_post')[0];
-    console.log(typePost);
-  
-    var valorInputTypePost = $('#type_post').val();
-    console.log(valorInputTypePost);
-  
-    var optionsTypePost = $('#type_post').children();
-    console.log(optionsTypePost);
-  
-    var inputTitlePostVal = $('.title-post-input');
-    var descriptionPostVal = $('.description-post');
-  
-    // trayenpo del dom (estructura de una publicaciopn contenido)
-    var titlePost = $('#title_post').text();
-    // console.log(titlePost); --> Nuevo Lenguaje de programación cuántico
-    var descriptionPost = $('#description_post').text();
-  
-    var btnSubmitFormPost = $('#submit_form_post');
-    var containerPublications = document.getElementById('all_publications');
-    console.log(containerPublications);
-    var structurePublication = document.getElementById('publication');
-    console.log(structurePublication);
-    // console.log(structurePublication.children());
-  
-    // funciones que capturen las entradas de los inputs y formularios
-  
-    $(tagsForPost).click(function(event) {
-      valorInputTag = $(this).val();
-      console.log(valorInputTag);
-    });
-  
-    $(typePost).click(function(event) {
-      valorInputTypePost = $(this).val();
-      console.log(valorInputTypePost);
-    });
-  
-    inputTitlePostVal.on('input', function() {
-      inputTitlePostVal = event.target.value ;
-      // console.log('newtitle:  ' + inputTitlePostVal);
-    });
-  
-    descriptionPostVal.on('input', function() {
-      inputDescriptionPostVal = event.target.value ;
-      // console.log('newdescription :  ' + descriptionPostVal);
-    });
-  
-    btnSubmitFormPost.click(function(event) {
-      var clonePost = structurePublication.cloneNode(true);
-      console.log(clonePost);
-      clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[0].firstElementChild.textContent = inputTitlePostVal ;
-      clonePost.children[0].children[0].children[0].children[1].children[0].children[0].children[1].children[0].textContent = inputDescriptionPostVal ;
-      clonePost.classList.remove('display_none');
-      containerPublications.prepend(clonePost);
-    });
-  });
-=======
 // Inicializamos el document
-$(document).ready(function () {
+$(document).ready(function() {
   // Declaramos nodos  del dom (estructura html de una publicacion contenido)
   var btnSubmitFormPost = $('#submit_form_post');
   var containerPublications = document.querySelector('#all_publications');
@@ -90,27 +22,27 @@ $(document).ready(function () {
   // console.log(descriptionPostVal);
 
   // Funciones que capturan las entradas de los inputs y formularios
-  $(tagsForPost).click(function (event) {
+  $(tagsForPost).click(function(event) {
     valorInputTag = $(this).val();
   });
 
-  $(typePost).click(function (event) {
+  $(typePost).click(function(event) {
     valorInputTypePost = $(this).val();
   });
 
-  descriptionPostVal.on('input', function () {
-    inputDescriptionPostVal = event.target.value;
+  descriptionPostVal.on('input', function() {
+    inputDescriptionPostVal = event.target.value ;
   });
 
-  btnSubmitFormPost.click(function (event) {
+  btnSubmitFormPost.click(function(event) {
     var user = firebase.auth().currentUser;
     var clonePost = structurePublication.cloneNode(true);
     var inputImgmodal = document.querySelector('#input_img_post');
-    clonePost.querySelector('#tag-of-post').textContent = valorInputTag;
+    clonePost.querySelector('#tag-of-post').textContent = valorInputTag ;
     $('#tag-of-post').attr('class', 'tags-posts');
-    clonePost.querySelector('#type-of-post').textContent = valorInputTypePost;
+    clonePost.querySelector('#type-of-post').textContent = valorInputTypePost ;
     $('#type-of-post').attr('class', 'tags-posts')
-    clonePost.querySelector('#description_post').textContent = inputDescriptionPostVal;
+    clonePost.querySelector('#description_post').textContent = inputDescriptionPostVal ;
     clonePost.querySelector('#time-of-post').textContent = moment().subtract(10, 'days').calendar() + '  ' + moment().format('LT');
 
     // Cambiamos la imagen default por la imagen del usuario en los posts
@@ -121,11 +53,11 @@ $(document).ready(function () {
     var imgPostClone = clonePost.querySelector('#img_post');
 
     // Extraemos img del input del modal
-    var fileImgInputNewPost = inputImgmodal.files[0].name;
+    var fileImgInputNewPost = inputImgmodal.files[0].name ;
     // console.log(fileImgInputNewPost);
     var reader = new FileReader();
 
-    reader.onload = function (event) {
+    reader.onload = function(event) {
       // console.log(event.target.result);
       imgPostClone.setAttribute('src', event.target.result);
       imgPostClone.setAttribute('class', 'img-responsive');
@@ -136,4 +68,4 @@ $(document).ready(function () {
     containerPublications.prepend(clonePost);
   });// Termina el evento de clik en  el boton submitt
 });
->>>>>>> 2480531489dc489cdf60f700e9e2158611be22e4
+
