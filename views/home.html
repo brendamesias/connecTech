@@ -132,14 +132,14 @@
 								<select class="form-control" id="type_post">
 								  <option>Events</option>
 								  <option>News</option>
-								  <option>Ask and consult</option>
+								  <option>Question</option>
 								  <option>Courses</option>
 								</select>
               </div>
             </form>
             <div class="form-group">
               <label for="message-text" class="control-label subtitles-modal">Description:</label>
-              <textarea class="form-control description-post" id="message-text" placeholder="what your publication about?"></textarea>
+              <textarea class="form-control description-post" id="message-text" placeholder="What is your publication about?"></textarea>
             </div>
 						<div class="form-group">
 					    <label class="subtitles-modal" for="exampleInputFile">File input</label>
@@ -168,6 +168,7 @@
 				</div>
 				<div class="modal-body">
 					<picture class="col-xs-12" id="user-photo">
+						<img id="my-photo"class="img-responsive my-photo" src="../assets/images/user-default.png">
 					</picture>
 					<div class="info">
 						<div>
@@ -188,6 +189,9 @@
 					<div class="wrapper-account-box">
 						<div class="title-friends">
 							<h4>MY Friends:</h4><i class="fa fa-users fa-2x" aria-hidden="true"></i>
+						</div>
+						<div id="container-my-friends">
+
 						</div>
 					</div>
 				<div class="modal-footer">
