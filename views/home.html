@@ -10,24 +10,30 @@
 	<title>Home</title>
 </head>
 <body class="vh100 fondo_plomo">
-	<div id="header">
-		<header class="container-flex-column header">
-	    <div class="col-xs-12 container-flex-row position_icon_top_left">
-	      <span onclick="openNav()"><i class="fa fa-bars fa-2x icon_top_left color_plomo_icon" aria-hidden="true"></i></span>
-	      <h2 style="color:white;">ConnecTech</h2>
-	      <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
-	    </div>
-	  </header>
-	</div>
 
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 container-flex-row">
+		      <span onclick="openNav()"><i class="fa fa-bars fa-2x icon_top_left color_plomo_icon" aria-hidden="true"></i></span>
+		      <h2 class="text_logo_header" style="color:white">ConnecTech</h2>
+		      <img class="photo_user_header" src="../assets/images/user-default.png" alt="">
+		    </div>
+			</div>
+		</div>
+  </header>
+
+	<!--seecion para hacer publicaciones-->
   <div class="section_to_post padding_cause_header">
-    <div class="container-flex-column">
-      <div class="col-xs-12 container-flex-row elements_inline">
-        <img class="img-responsive photo_user_header" src="../assets/images/user-default.png" alt="">
-        <form class="form-inline style="width:100%"">
-          <a data-toggle="modal" data-target="#form_post" data-whatever="@mdo"><input type="email"  class="form-control input_user_publication" id="exampleInputEmail3" placeholder="Share, ask and connect"></a>
-        </form>
-      </div>
+    <div class="container">
+			<div class="row">
+				<div class="col-xs-12 .col-sm-6 container-flex-row elements_inline">
+	        <img class="photo_user_header" src="../assets/images/user-default.png" alt="">
+	        <form class="form-inline" style="width:80%">
+	          <a data-toggle="modal" data-target="#form_post" data-whatever="@mdo"><input type="email"  class="form-control input_user_publication" id="exampleInputEmail3" placeholder="Share, ask and connect"></a>
+	        </form>
+	      </div>
+			</div>
     </div>
   </div>
 
@@ -55,13 +61,14 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-12">
-										<span id="title_post">Nuevo Lenguaje de programación cuántico</span>
+										<span id="tag_of_post" class="bolder" style="color:#0B0B3B">Front-end</span>
+										<span id="TypeOfpost" class="bolder" style="color:#B40431">News</span>
 									</div>
 									<div class="col-xs-12">
 										<p id="description_post">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 									</div>
 									<div class="col-xs-12">
-										<img  id="img_post" style="width:100%" src="../assets/images/backend_fondo.png">
+										<img   class="imgPost" id="img_post" style="width:100%" src="../assets/images/backend_fondo.png">
 									</div>
 								</div><!--row-->
 							</div><!--container-->
@@ -115,18 +122,14 @@
 								  <option>Courses</option>
 								</select>
               </div>
-              <div class="form-group form-inline">
-                <label for="exampleInputEmail2">TITLE:</label>
-                <input type="text" class="form-control title-post-input" id="exampleInputEmail2 "  placeholder="what your publication about?">
-              </div>
             </form>
             <div class="form-group">
               <label for="message-text" class="control-label">Description:</label>
-              <textarea class="form-control description-post" id="message-text"></textarea>
+              <textarea class="form-control description-post" id="message-text" placeholder="what your publication about?"></textarea>
             </div>
 						<div class="form-group">
 					    <label for="exampleInputFile">File input</label>
-					    <input type="file" id="exampleInputFile">
+					    <input type="file" id="input_img_post">
 					  </div>
           </form>
         </div>

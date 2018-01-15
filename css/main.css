@@ -173,34 +173,25 @@ margin-bottom: 16em;
   background-color: black;
   color:white;
 }
+
 /*Header*/
-#header{
-  position:fixed;
-  z-index: 1000;
-}
-.header{
+header{
   background-color: black;
-  padding-top: 0;
-  padding-bottom: 0;
+  background-color: black;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
-.logo_header{
-height: auto;
-width: 30%;
+.text_logo_header{
+  margin-bottom: 0.5em;
 }
 .photo_user_header{
 height: auto;
-width: 10%;
+width: 3em;
 }
 
 /*vista home*/
-.section_phrase{
-  text-align: center;
-  font-family:sans-serif;
-}
-.phrase_tech{
-  padding-top: 1em;
-  border: none;
-}
+
 .elements_inline{
   display: flex;
   justify-content: flex-start;
@@ -219,9 +210,10 @@ width: 10%;
   border-bottom: 1px dotted #818181;
 }
 .padding_cause_header{
-  padding-top: 4.5em;
+  padding-top: 6em;
+  padding-bottom: 0.5em;
 }
-#title_post{
+.bolder{
   font-weight: bold;
 }
 
