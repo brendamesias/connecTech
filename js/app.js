@@ -22,6 +22,7 @@ $(document).ready(function() {
 				.signInWithPopup(provider)
 				.then(function(result) {
 					var user = firebase.auth().currentUser;
+					saveDataUser(user);
 					console.log(user.displayName);
 					console.log(user.photoURL);
 
@@ -43,21 +44,39 @@ $(document).ready(function() {
 	// Funcion que cambia los datos default por los datos del usuario actual
 	$('#min-photo-user').on('click', function () {
 		var user = firebase.auth().currentUser;
-		$('#user-photo').append('<img class="img-responsive col-xs-8 col-xs-offset-2 my-photo" src="' + user.photoURL + '"/>');
+		// $('#user-photo').append('<img class="img-responsive col-xs-8 col-xs-offset-2 my-photo" src="' + user.photoURL + '"/>');
+		$('#my-photo').attr('src', user.photoURL);
 		$('#user-name').text(user.displayName);
 		$('#user-email').text(user.email);
 		console.log(user.displayName)
-});
-	// Guardar información del usuario en  la base de datos
-	function saveUser(user) {
-		var userData = {
+	});
+	
+	// Escribiendo en la base de datos directamente 
+		$('#btn-modal').click(function(){
+			firebase.database().ref('trying')
+			.set({
+				nombre: 'Tefa',
+				edad: '21'
+			})
+		});
+	// Guardar información de los usuarios en  la base de datos
+	function saveDataUser(user) {
+		var myUser = {
 			uid: user.uid,
 			name: user.displayName,
 			email: user.email,
 			photo: user.photoURL
 		}
-		firebase.database().ref('usersData').push(userData);
+		firebase.database().ref('myUsersData/' + user.uid)
+		.set(myUser);
 	};
+	// Leer Base de datos 
+	firebase.database().ref('myUsersData')
+	.on('child_added', function(e) {
+		var user = e.val();
+		$('#container-my-friends').append('<img class="img-responsive" src="'+ user.photo +'"/>');
+	});
+
 	
 	// DATA REAL TIME FIREBASE EXAMPLE
 	// var trying =  $('#trying');
