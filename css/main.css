@@ -14,14 +14,15 @@
 .inline {
   display:inline-block;
 }
-.icon_top_left{
+.icon-menu {
   margin-left: 0.3em;
-  color: #cc9900 ;
+  color: #d6d6d6da ;
 }
 .position_icon_top_left{
   padding-left: 0;
   margin-left: 0;
 }
+
 /* Estilos Generales*/
 .fa {
   font-size: 1.5em;
@@ -68,13 +69,13 @@
   margin-top: 70%;
 margin-bottom: 16em;
 }
+
 /* Vista welcome */
 
 .bckg {
   background-image: url(../assets/images/fondo.jpg);
   background-size: cover;
 }
-
 .container-btns {
   margin-top: 3em;
   padding: 0 3em;
@@ -105,38 +106,14 @@ margin-bottom: 16em;
 }
 .description {
   margin: 5em 1em 0 1em;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   font-size:2.3em;
   color:rgb(255, 255, 255)
 }
-/* Vista User */ 
 
-main {
-  font-family: 'Lato', sans-serif;
-  text-align: center;
-}
+/* Modal  User */ 
 
-.header {
-  padding:0.5em 1em;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  height:60px;
-}
-.logo-header {
-  color:#fff;
-  font-weight: bolder;
-  font-size: 1.5em;
-  vertical-align: bottom;
-}
-.header-img {
-  max-height: auto;
-  max-width: 50px;
-}
-.user-photo-min {
-  max-width: 30px;
-  float: right;
-}
 body > header > div > div > nav > ul:nth-child(1) > i {
   color:rgb(194, 194, 194);
   position: absolute;
@@ -152,28 +129,31 @@ body > header > div > div > nav > ul:nth-child(1) > i {
   background-color: rgba(35, 165, 94, 0.562);
   border:none;
 }
-.about {
-  background-color: rgb(200, 209, 235);
+.wrapper-account-box {
+  background-color: rgba(158, 159, 161, 0.322);
+  border-bottom: 3px solid rgb(158, 161, 160);
+  border-right:  3px solid rgb(158, 161, 160);
   border-radius: 3em;
   padding:1em;
+  margin-bottom: 0.5em;
+}
+.my-photo {
+  border-radius:50%;
 }
 .btn-tags {
   font-size: 0.9em;
   font-weight: bold;
-  background: rgba(215, 213, 235, 0.959);
+  background: rgba(22, 223, 83, 0.527);
   border-radius: 10px;
   padding:0.4em;
 }
 /* Vista interests*/
 
-.btn_before{
-  margin-left: 0.3em;
+body > header > div.col-xs-12.position_top_left > a > i {
+  float: left;
+  color:#818181;
 }
-.position_top_left{
-  padding-left: 0;
-  margin-left: 0;
-  margin-top: 1em;
-}
+
 .btn_interests_next{
   background-color: #25EA91 ;
   border: none;
@@ -199,7 +179,7 @@ body > header > div > div > nav > ul:nth-child(1) > i {
   background-color: #EBEDEF;
 }
 
-/* Tags segun intereses a escger por el usuario*/
+/* Tags  a escoger por el usuario*/
 .fondo_front{
   background-image: url(../assets/images/fondo_fronted.jpg);
 }
@@ -226,38 +206,40 @@ body > header > div > div > nav > ul:nth-child(1) > i {
   color:white;
 }
 
-/* Header */
-#header{
-  position:fixed;
-  z-index: 1000;
-}
+/* Header Home*/
+
 .header{
+  text-align: center;
   background-color: black;
+  color: #fff;
   padding-top: 0;
   padding-bottom: 0;
 }
-.logo_header{
-height: auto;
-width: 30%;
+body > div.container-fluid > div > div > header > ul > li:nth-child(3) {
+  float: right;
+  line-height: 6;
 }
-.photo_user_header{
-height: auto;
-width: 10%;
+body > div.container-fluid > div > div > header > ul > li:nth-child(1) {
+ float: left;
+ line-height: 6;
 }
-#header > header > div > span > i {
-  color: #eec13c86;
+.inline {
+  display: inline-block;
+}
+body > div.container-fluid > div > div > header > ul {
+  margin:0;
 }
 
 /* Vista Home*/
 
-.section_phrase{
-  text-align: center;
-  font-family:sans-serif;
+#header > div > header > div > h2 {
+  color:rgba(255, 255, 255, 0.863);
+  font-weight: 200;
 }
-.phrase_tech{
-  padding-top: 1em;
-  border: none;
-}
+.photo_user_header{
+  height: auto;
+  width: 10%;
+  }
 .elements_inline{
   display: flex;
   justify-content: flex-start;
@@ -269,14 +251,44 @@ width: 10%;
   padding-bottom: 1em;
 }
 .publication{
-  padding-top: 1em;
   text-align:justify;
 }
-.section_to_post{
-  border-bottom: 1px dotted #818181;
+.wrapper-publications {
+  padding:1.3em;
+  background-color: #a7a6a659;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
 }
-.padding_cause_header{
-  padding-top: 4.5em;
+.tags-posts {
+  font-size: 0.9em;
+  font-weight: bold;
+  background: rgba(183, 182, 187, 0.377);
+  border-radius: 5px;
+  border: 1px solid #818181;
+  padding:0.5em;
+  margin:0.5em;
+}
+#description_post {
+  margin:0.5em;
+}
+.section_to_post {
+  padding:1em;
+}
+.wrapper-posts {
+  background-color: rgba(50, 209, 130, 0.342);
+  padding:1.5em;
+  border-radius: 15px;
+}
+.spacing {
+  padding-top: 1em;
+}
+body > div.section_to_post > div > div > div > div > span > i {
+  color: rgb(88, 88, 88);
+}
+body > div.main-title > h3 {
+  margin:0;
+  padding: 0.5em 0 0 0;
 }
 #container-post {
   padding:1em;
@@ -287,6 +299,7 @@ width: 10%;
 #title_post{
   font-weight: bold;
 }
+
 
 /* Modal menu hamburguesa vista home */
 
@@ -324,13 +337,10 @@ width: 10%;
 }
 
 /* Estilos modal vista home */
-#preview {
-  position: relative;
-}
-#preview a {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
-  display: none;
+.subtitles-modal {
+  background-color: rgba(50, 219, 120, 0.205);
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  border-bottom: 3px solid #ffd103d5;
+  border-right: 3px solid #ffd103d5;
 }

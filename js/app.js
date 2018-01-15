@@ -1,4 +1,5 @@
-$(document).ready(function () {
+// Inicializamos el documento
+$(document).ready(function() {
 
 	// Inicializando Firebase
 	var config = {
@@ -12,32 +13,42 @@ $(document).ready(function () {
 	firebase.initializeApp(config);
 
 	var provider = new firebase.auth.GoogleAuthProvider();
+	provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 	// Evento que por medio  de un pop-up te permite acceder con tu cuenta de  google
 	$('#btn-signup').click(
 		function signUp() {
 			firebase.auth()
 				.signInWithPopup(provider)
-				.then(function (result) {
-					// window.location.href = 'register.html';
-					console.log(result.user.displayName);
-					console.log(result.user.photoURL);
+				.then(function(result) {
+					var user = firebase.auth().currentUser;
+					console.log(user.displayName);
+					console.log(user.photoURL);
 
-					// Extraemos los datos de usuario para el modal 
+					// Extraemos los datos de usuario para el modal de registro exitoso
 					$('#btn-modal').addClass('trying');
 					$('#btn-modal').attr('data-toggle', 'modal');
 					$('#btn-modal').attr('data-target', '#myModal');
 					$('#btn-modal').trigger('click');
-					$('#your-name').text(result.user.displayName);
-					$('#your-email').text(result.user.email);
-					$('#your-photo').append('<img class="img-responsive" src="' + result.user.photoURL + '"/>');
+					$('#your-name').text(user.displayName);
+					$('#your-email').text(user.email);
+					$('#your-photo').append('<img class="img-responsive" src="' + user.photoURL + '"/>');
 				})
 		});
-	// Redirigiendo a la vista home
+	// Redireccionamos a la vista interests
 	$('#next-view').on('click', function(){
 		window.location.href = 'interests.html';
 	})
-	//Guardar información del usuario en  la base de datos
+
+	// Funcion que cambia los datos default por los datos del usuario actual
+	$('#min-photo-user').on('click', function () {
+		var user = firebase.auth().currentUser;
+		$('#user-photo').append('<img class="img-responsive col-xs-8 col-xs-offset-2 my-photo" src="' + user.photoURL + '"/>');
+		$('#user-name').text(user.displayName);
+		$('#user-email').text(user.email);
+		console.log(user.displayName)
+});
+	// Guardar información del usuario en  la base de datos
 	function saveUser(user) {
 		var userData = {
 			uid: user.uid,
@@ -47,34 +58,7 @@ $(document).ready(function () {
 		}
 		firebase.database().ref('usersData').push(userData);
 	};
-	// Upload Image
-	$('#preview').hover(
-		function () {
-			$(this).find('a').fadeIn();
-		}, function () {
-			$(this).find('a').fadeOut();
-		}
-	)
-	$('#file-select').on('click', function (e) {
-		e.preventDefault();
-
-		$('#file').click();
-	})
-
-	$('input[type=file]').change(function () {
-		var file = (this.files[0].name).toString();
-		var reader = new FileReader();
-
-		$('#file-info').text('');
-		$('#file-info').text(file);
-
-		reader.onload = function (e) {
-			$('#preview img').attr('src', e.target.result);
-		}
-
-		reader.readAsDataURL(this.files[0]);
-	});
-
+	
 	// DATA REAL TIME FIREBASE EXAMPLE
 	// var trying =  $('#trying');
 	// var theRef = firebase.database().ref().child('text');
