@@ -260,6 +260,9 @@ body > div.container-fluid > div > div > header > ul {
   height: 350px;
   border-radius: 15px;
 }
+#img_post {
+  max-height:250px;
+}
 .tags-posts {
   font-size: 0.9em;
   font-weight: bold;
@@ -341,6 +344,6 @@ body > div.main-title > h3 {
   background-color: rgba(50, 219, 120, 0.205);
   border-radius: 20px;
   padding: 0.5em 1em;
-  border-bottom: 3px solid #ffd103d5;
-  border-right: 3px solid #ffd103d5;
+  border-bottom: 3px solid #47e269d5;
+  border-right: 3px solid #47e269d5;
 }
