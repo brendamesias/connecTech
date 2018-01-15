@@ -39,6 +39,7 @@ $(document).ready(function() {
     clonePost.querySelector('#tag_of_post').textContent = valorInputTag ;
     clonePost.querySelector('#TypeOfpost').textContent = valorInputTypePost ;
     clonePost.querySelector('#description_post').textContent = inputDescriptionPostVal ;
+    clonePost.querySelector('#timeOfPost').textContent = moment().subtract(10, 'days').calendar() + '  ' + moment().format('LT'); ;
 
     // trayendo elemento html img por defecto del post clonado
     var imgPostClone = clonePost.querySelector('#img_post');
